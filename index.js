@@ -13,6 +13,8 @@ app.set('layout extractScripts', true);
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
+//static files
+app.use(express.static('./assets'));
 
 app.use('/', require('./routes'));
 
