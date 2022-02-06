@@ -1,7 +1,11 @@
 const express = require('express');
 const app= express();
 const port= 3000;
+const ejsLayout = require('express-ejs-layouts');
 
+app.use(ejsLayout);
+app.set('layout extractStyles',true);
+app.set('layout extractScripts', true);
 //setup view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
