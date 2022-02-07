@@ -1,0 +1,35 @@
+[33mcommit ea4819476b18a630f05439073e79b185ae9f03f6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Divyanshu <divyanshu.it19@nsut.ac.in>
+Date:   Sun Feb 6 20:38:22 2022 +0530
+
+    added static files and folders
+
+[33mcommit 0b324d5e59e9605c2199e0b8b3f19aaf1334bb77[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Divyanshu <divyanshu.it19@nsut.ac.in>
+Date:   Sun Feb 6 20:11:10 2022 +0530
+
+    Connected to Database
+
+[33mcommit b486448c152672eae9c79483502f01b511422fac[m
+Author: Divyanshu <divyanshu.it19@nsut.ac.in>
+Date:   Sun Feb 6 19:56:01 2022 +0530
+
+    added partial layouts
+
+[33mcommit c3c4203a677479aad1099c55049fd1e82e22c909[m
+Author: Divyanshu <divyanshu.it19@nsut.ac.in>
+Date:   Sat Feb 5 22:35:15 2022 +0530
+
+    added views and installed ejs
+
+[33mcommit 3ad4bcb3b480eb31da45007bf9d7752eb3fcb629[m
+Author: Divyanshu <divyanshu.it19@nsut.ac.in>
+Date:   Sat Feb 5 22:11:29 2022 +0530
+
+    added routes and home and user controller
+
+[33mcommit f84ec401bdb0e0c18f1caba072d6cf1772ef41f7[m
+Author: Divyanshu <divyanshu.it19@nsut.ac.in>
+Date:   Sat Feb 5 17:59:48 2022 +0530
+
+    Folder Structure
