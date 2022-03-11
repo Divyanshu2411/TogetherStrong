@@ -1,0 +1,12 @@
+Truly Anonymous
+
+
+Anonymous social media website.
+No concern of privacy infiltration
+
+People can share their thoughts, works and ask for help anonamously. 
+Features:
+Login and signup without establishing any identity
+Posts, comment, likes
+To handle negative content, concept of mass liking (if the total likes goes beyond -5, the content will be hidden and only viewable on explicity clicing it)
+A user who has been repeatedly flagged will be blocked.

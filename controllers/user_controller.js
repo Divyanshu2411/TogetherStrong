@@ -15,3 +15,16 @@ module.exports.signin=function(req,res){
         title:'SIGN IN'
     });
 }
+
+
+//get the signup data
+module.exports.create = function(req,res){
+if(req.body.password!=req.body.confPass){
+    return res.redirect('back');
+}
+}
+
+//get the signin data
+module.exports.createSession= function(req,res){
+
+}
