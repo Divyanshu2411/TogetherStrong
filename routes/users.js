@@ -8,4 +8,5 @@ router.get('/profile',userControl.profile); //this become localhost:3000/users/p
 router.get('/signup',userControl.signup);
 router.get('/signin',userControl.signin);
 
+router.post('/create', userControl.create)
 module.exports= router;
