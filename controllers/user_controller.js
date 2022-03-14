@@ -1,9 +1,28 @@
 const User = require('../model/user');
 
 module.exports.profile=function(req, res){
-    return res.render('users', {
-        title:"Users"
-    });
+    console.log(req.cookies);
+    if(typeof(req.cookies)==="undefined"){
+        console.log("No cookies exist");
+        res.redirect("back");
+    }
+
+    User.findOne({id:req.cookies}, function(err, user){
+        if(err) console.log(err);
+        if(!user) {
+            console.log("Please Sign In");
+            res.redirect("back");
+        }
+        console.log(user);
+
+        return res.render('users', {
+            title:"Users",
+            email: user.email,
+            userName: user.userName,
+            name: user.name
+        });
+    })
+    
 }
 
 module.exports.signup=function(req,res){
