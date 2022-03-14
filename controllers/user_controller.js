@@ -39,5 +39,17 @@ module.exports.create = function(req,res){
 
 //get the signin data
 module.exports.createSession= function(req,res){
+User.findOne({userName: req.body.userName}, function(err,user){
+    if(err) console.log(err);
 
+    if(!user)  { console.log("user don't exist");res.redirect('back'); } //if user doesn't exist
+
+    if(user){
+        if(user.password!=req.body.password) { console.log("password wrong");res.redirect('back'); }//if password not same
+
+        //handle session creation
+        res.cookie('user_id', user.id);
+        return res.redirect('/user/profile');
+    }
+})
 }
