@@ -7,7 +7,7 @@ module.exports.profile=function(req, res){
         res.redirect("back");
     }
 
-    User.findOne({id:req.cookies}, function(err, user){
+    User.findOne({_id:req.cookies.user_id}, function(err, user){
         if(err) console.log(err);
         if(!user) {
             console.log("Please Sign In");
