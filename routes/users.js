@@ -10,4 +10,5 @@ router.get('/signin',userControl.signin);
 
 router.post('/create', userControl.create);
 router.post('/create-session',userControl.createSession);
+router.post('/signout',userControl.signout);
 module.exports= router;
