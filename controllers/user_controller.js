@@ -39,5 +39,8 @@ module.exports.create = function(req,res){
 
 //get the signin data
 module.exports.createSession= function(req,res){
+    console.log(req.body);
+    console.log('sign in success');
 
+    return res.redirect('/');
 }
