@@ -12,7 +12,9 @@ const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
 
-app.use(express.urlencoded());
+const MongoStore = require('connect-mongo'); //iske documentations se dekho, version me cheeze badal gayi. https://stackoverflow.com/questions/65524022/connect-mongo-autoremoveinterval-does-not-work-correctly
+
+app.use(express.urlencoded({extended:true}));
 
 app.use(cookieParser());
 
@@ -30,22 +32,35 @@ app.set('views', './views');
 //static files
 app.use(express.static('./assets'));
 
-
+//mongo  store is used to store the session cookie in the db
 app.use(session({
     name: 'TogetherStrong',
     //TODO change the secret before deployment in production mode
     secret:'Itisasecret',
-    saveUninitalized:false,
+    saveUninitialized: false,
     resave: false,
     cookie:{
         maxAge:(1000*60*100) //in ms
-    }
+    },
+
+    store: MongoStore.create(
+        {
+            mongoUrl: 'mongodb://localhost/togetherStrong_development',
+            autoRemove: 'disabled'
+        },
+
+        function(err){ //callback function
+            console.log(err||"connect-mongo setup ✅ ")
+        }
+    )
 
 }));
 app.use(passport.initialize());
 console.log("passport initalise called");
 app.use(passport.session());
 console.log("passport session called");
+
+app.use(passport.setAuthenticatedUser); 
 
 
 //use express routers

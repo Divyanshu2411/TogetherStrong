@@ -10,5 +10,15 @@
 </head>
 <body>
     <header>
-        Header !!
+        <nav>
+            <% if(locals.user){ %>
+                <li><%= user%> </li>
+                <li><a href="/user/signout"> Sign out </a> <li>
+            <% }else{ %> 
+                <li><a href="/user/signin"> Sign in </a> <li>
+                <li><a href="/user/signup"> Sign up </a> <li>
+               
+            <% } %> 
+                
+        </nav>
     </header>    
