@@ -1,7 +1,12 @@
 <link rel="stylesheet" href="./css/home.css">
 <h1>Together Strong <%= title %> </h1>
 
-<form action="POST" id="newPost" action="">
+<form method="POST" id="newPost" action="/post/new-post">
     <textarea name="content" id="" cols="30" rows="3" placeholder="Type Here ....."></textarea>
     <input type="submit" value="Post">
 </form>
+
+<% for(let i=0; i<posts.length ;i++){%> 
+<li><%= posts[i].content%> </li>
+<% } %> 
+    

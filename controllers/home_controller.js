@@ -1,7 +1,15 @@
-module.exports.home = function(req, res){
+const Post = require('../model/post');
 
-    console.log(req.cookies );
-    return res.render('home',{
-        title: "Home"
+module.exports.home = function(req, res){
+    Post.find(function(err,post){
+        if(err){
+            console.log(err);
+        }
+        console.log(post);
+        return res.render('home',{
+            title: "Home",
+            posts:post
+        });
     });
-}
+        
+    }

@@ -58,3 +58,27 @@ module.exports.destroySession =function(req,res){
     req.logout();
     return res.redirect('/');
 }
+
+/*
+An instance of a model is called a document. Creating them and saving to the database is easy.
+
+const Tank = mongoose.model('Tank', yourSchema);
+
+const small = new Tank({ size: 'small' });
+small.save(function (err) {
+  if (err) return handleError(err);
+  // saved!
+});
+
+// or
+
+Tank.create({ size: 'small' }, function (err, small) {
+  if (err) return handleError(err);
+  // saved!
+});
+
+// or, for inserting large batches of documents
+Tank.insertMany([{ size: 'small' }], function(err) {
+
+});
+*/
